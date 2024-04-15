@@ -1,17 +1,18 @@
 import styles from "./page.module.css";
-import course from './course.json';
+import dynamic from 'next/dynamic';
+
+
+const ClientComponent = dynamic(
+    () => import('./some-component'),
+    {ssr: false}
+)
 
 
 export default function Home() {
     return (
         <main className={styles.main}>
-            <ul>
-                {course.lessons.map(lesson => {
-                    return <li key={lesson.name}>
-                        <h2>{lesson.title}</h2>
-                    </li>
-                })}
-            </ul>
+            <h2>React</h2>
+            <ClientComponent/>
         </main>
     );
 }
