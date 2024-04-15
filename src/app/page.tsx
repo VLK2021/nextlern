@@ -13,6 +13,7 @@ async function getAllCourses(): Promise<typeof course> {
 export default async function Home() {
     const courses = await getAllCourses();
 
+
     return (
         <main className={styles.main}>
             <h2>TEST</h2>
