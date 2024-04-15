@@ -1,4 +1,5 @@
 import styles from "./page.module.css";
+// @ts-ignore
 import course from './course.json';
 import {Lesson} from "./lesson";
 
